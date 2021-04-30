@@ -1,0 +1,248 @@
+{
+	"variables": [],
+	"info": {
+		"name": "workshop-ms",
+		"_postman_id": "ca10dc86-93d8-1dd3-a5b3-0a331832219a",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "spring xml",
+			"description": "",
+			"item": [
+				{
+					"name": "find all persons",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-xml/persons",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-xml/persons/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "register person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-xml/persons",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first-name\": \"Jaime 2\",\n\t\"last-name\": \"Jaime 3\",\n\t\"age\": 25,\n\t\"type-document\": \"dni\",\n\t\"codigo-document\": \"123456789\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-xml/persons/1",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first-name\": \"Klary\",\n\t\"last-name\": \"Lozano 2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-xml/persons/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "spring annotations",
+			"description": "",
+			"item": [
+				{
+					"name": "find all persons",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-annotations/persons",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-annotations/persons/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "register person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-annotations/persons",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first-name\": \"Jaime 4\",\n\t\"last-name\": \"Jaime 5\",\n\t\"age\": 25,\n\t\"type-document\": \"dni\",\n\t\"codigo-document\": \"123456789\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-annotations/persons/1",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first-name\": \"Klary\",\n\t\"last-name\": \"Lozano 2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete person",
+					"request": {
+						"url": "http://localhost:8080/ms-dummy-annotations/persons/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "spring boot",
+			"description": "",
+			"item": [
+				{
+					"name": "find all persons",
+					"request": {
+						"url": "http://localhost:8080/persons",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "find person",
+					"request": {
+						"url": "http://localhost:8080/persons/1",
+						"method": "GET",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "register person",
+					"request": {
+						"url": "http://localhost:8080/persons",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first-name\": \"Jaime 4\",\n\t\"last-name\": \"Jaime 5\",\n\t\"age\": 25,\n\t\"type-document\": \"dni\",\n\t\"codigo-document\": \"123456789\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "update person",
+					"request": {
+						"url": "http://localhost:8080/persons/1",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"first-name\": \"Klary\",\n\t\"last-name\": \"Lozano 2\"\n}"
+						},
+						"description": ""
+					},
+					"response": []
+				},
+				{
+					"name": "delete person",
+					"request": {
+						"url": "http://localhost:8080/persons/1",
+						"method": "DELETE",
+						"header": [],
+						"body": {},
+						"description": ""
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
