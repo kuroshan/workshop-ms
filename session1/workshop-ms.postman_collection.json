@@ -250,6 +250,121 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "actuator",
+					"description": "",
+					"item": [
+						{
+							"name": "actuator",
+							"request": {
+								"url": "http://localhost:8080/actuator",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "info",
+							"request": {
+								"url": "http://localhost:8080/actuator/info",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "health",
+							"request": {
+								"url": "http://localhost:8080/actuator/health",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "loggers",
+							"request": {
+								"url": "http://localhost:8080/actuator/loggers",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "loggers - ROOT - TRACE",
+							"request": {
+								"url": "http://localhost:8080/actuator/loggers/ROOT",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"configuredLevel\": \"TRACE\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "metrics",
+							"request": {
+								"url": "http://localhost:8080/actuator/metrics",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "system.cpu.usage",
+							"request": {
+								"url": "http://localhost:8080/actuator/metrics/system.cpu.usage",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "http.server.requests",
+							"request": {
+								"url": "http://localhost:8080/actuator/metrics/http.server.requests",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "shutdown",
+							"request": {
+								"url": "http://localhost:8080/actuator/shutdown",
+								"method": "POST",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		}
