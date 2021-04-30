@@ -2,6 +2,8 @@ package com.kuroshan.workshop.ms.dummy.controllers;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -31,7 +33,7 @@ public class PersonController {
 	private PersonService personService;
 
 	@PostMapping(value = "")
-	public ResponseEntity<PersonResponse> registerPerson(@RequestBody PersonRequest request) {
+	public ResponseEntity<PersonResponse> registerPerson(@Valid @RequestBody PersonRequest request) {
 		return new ResponseEntity<PersonResponse>(personService.createPerson(request), HttpStatus.CREATED);
 	}
 
