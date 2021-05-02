@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: ms-hr-employees
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/XE
+    username: hr
+    password: hrpw
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    database-platform: org.hibernate.dialect.Oracle10gDialect
+
+server:
+  servlet:
+    context-path: /ms-hr-employees/v1
+  port: 9091
