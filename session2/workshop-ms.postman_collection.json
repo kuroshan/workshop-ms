@@ -429,6 +429,67 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "areas",
+					"description": "",
+					"item": [
+						{
+							"name": "departments/custom/10",
+							"request": {
+								"url": "http://localhost:9092/ms-hr-areas/v1/departments/custom/10",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "departments/10",
+							"request": {
+								"url": "http://localhost:9092/ms-hr-areas/v1/departments/10",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "departments - param",
+							"request": {
+								"url": {
+									"raw": "http://localhost:9092/ms-hr-areas/v1/departments?name=as",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9092",
+									"path": [
+										"ms-hr-areas",
+										"v1",
+										"departments"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "as",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		}
