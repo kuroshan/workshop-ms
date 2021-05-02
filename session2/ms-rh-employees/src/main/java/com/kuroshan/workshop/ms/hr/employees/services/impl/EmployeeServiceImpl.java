@@ -1,6 +1,6 @@
 package com.kuroshan.workshop.ms.hr.employees.services.impl;
 
-import com.kuroshan.workshop.ms.hr.employees.EmployeeException;
+import com.kuroshan.workshop.ms.hr.employees.exceptions.EmployeeException;
 import com.kuroshan.workshop.ms.hr.employees.controllers.response.EmployeeResponse;
 import com.kuroshan.workshop.ms.hr.employees.models.Employee;
 import com.kuroshan.workshop.ms.hr.employees.repositories.EmployeeRepository;
