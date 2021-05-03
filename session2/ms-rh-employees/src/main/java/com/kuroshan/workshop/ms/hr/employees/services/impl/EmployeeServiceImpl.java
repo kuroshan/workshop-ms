@@ -29,9 +29,17 @@ public class EmployeeServiceImpl implements EmployeeService {
 	}
 
 	private EmployeeResponse buildResponse(Employee e) {
-		return EmployeeResponse.builder().employeeId(e.getEmployeeId()).firstName(e.getFirstName())
-				.lastName(e.getLastName()).email(e.getEmail()).phoneNumber(e.getPhoneNumber()).hireDate(e.getHireDate())
-				.salary(e.getSalary()).commissionPct(e.getCommissionPct()).departmentId(e.getDepartmentId()).build();
+		return EmployeeResponse.builder()
+				.employeeId(e.getEmployeeId())
+				.firstName(e.getFirstName())
+				.lastName(e.getLastName())
+				.email(e.getEmail())
+				.phoneNumber(e.getPhoneNumber())
+				.hireDate(e.getHireDate())
+				.salary(e.getSalary())
+				.commissionPct(e.getCommissionPct())
+				.departmentId(e.getDepartmentId())
+				.build();
 	}
 
 }

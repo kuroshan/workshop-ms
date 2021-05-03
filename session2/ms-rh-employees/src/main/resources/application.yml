@@ -13,3 +13,8 @@ server:
   servlet:
     context-path: /ms-hr-employees/v1
   port: 9091
+
+api:
+  support:
+    ms-human-resources-areas:
+      url: http://localhost:9092/ms-hr-areas/v1

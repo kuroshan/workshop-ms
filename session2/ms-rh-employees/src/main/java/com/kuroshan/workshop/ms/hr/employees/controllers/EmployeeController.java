@@ -1,6 +1,7 @@
 package com.kuroshan.workshop.ms.hr.employees.controllers;
 
 import com.kuroshan.workshop.ms.hr.employees.controllers.response.EmployeeResponse;
+import com.kuroshan.workshop.ms.hr.employees.services.AreaService;
 import com.kuroshan.workshop.ms.hr.employees.services.EmployeeService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -16,19 +17,24 @@ import java.util.List;
 @RequestMapping(value = "/employees")
 public class EmployeeController {
 
-  @Autowired
-  private EmployeeService employeeService;
+	@Autowired
+	private EmployeeService employeeService;
 
-  @GetMapping(value = "")
-  @ResponseStatus(HttpStatus.OK)
-  public List<EmployeeResponse> listEmployees() {
-    return employeeService.findAllEmployees();
-  }
-  
-  @GetMapping(value = "/{id}")
-  @ResponseStatus(HttpStatus.OK)
-  public EmployeeResponse getEmployee(@PathVariable long id) {
-    return employeeService.findEmployeeById(id);
-  }
+	@Autowired
+	private AreaService areaService;
+
+	@GetMapping(value = "")
+	@ResponseStatus(HttpStatus.OK)
+	public List<EmployeeResponse> listEmployees() {
+		return employeeService.findAllEmployees();
+	}
+
+	@GetMapping(value = "/{id}")
+	@ResponseStatus(HttpStatus.OK)
+	public EmployeeResponse getEmployee(@PathVariable long id) {
+		EmployeeResponse response = employeeService.findEmployeeById(id);
+		response.setDepartment(areaService.getDepartment(response.getDepartmentId()));
+		return response;
+	}
 
 }
