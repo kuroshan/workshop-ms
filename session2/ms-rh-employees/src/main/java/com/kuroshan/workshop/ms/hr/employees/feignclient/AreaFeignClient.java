@@ -6,7 +6,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.kuroshan.workshop.ms.hr.employees.controllers.response.DepartmentResponse;
 
-@FeignClient(name = "areaservice", url = "${api.support.ms-human-resources-areas.url}")
+@FeignClient(name = "areas-service", url = "${api.support.ms-human-resources-areas.url}")
 public interface AreaFeignClient {
 	
 	@GetMapping(value = "/departments/custom/{id}")
