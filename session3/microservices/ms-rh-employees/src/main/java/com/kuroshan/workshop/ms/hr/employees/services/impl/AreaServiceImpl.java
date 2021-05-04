@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import com.kuroshan.workshop.ms.hr.employees.controllers.response.DepartmentResponse;
-import com.kuroshan.workshop.ms.hr.employees.feignclient.AreaFeignClient;
 import com.kuroshan.workshop.ms.hr.employees.services.AreaService;
 
 @Service
@@ -17,9 +16,6 @@ public class AreaServiceImpl implements AreaService {
 	
 	@Value("${api.support.ms-human-resources-areas.url:http://localhost:8082/ms-hr-areas/v1}")
 	private String apiSupportMsHumanResourcesAreas;
-
-	@Autowired
-	private AreaFeignClient areaFeignClient;
 
 	@Autowired
 	private RestTemplate restTemplate;
