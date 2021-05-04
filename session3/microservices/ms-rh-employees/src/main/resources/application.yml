@@ -8,6 +8,10 @@ spring:
     driver-class-name: oracle.jdbc.OracleDriver
   jpa:
     database-platform: org.hibernate.dialect.Oracle10gDialect
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
 
 server:
   servlet:
@@ -18,6 +22,8 @@ api:
   support:
     ms-human-resources-areas:
       url: http://localhost:9092/ms-hr-areas/v1
+  areas-service:
+    name: ms-hr-areas
 
 eureka:
   instance:
