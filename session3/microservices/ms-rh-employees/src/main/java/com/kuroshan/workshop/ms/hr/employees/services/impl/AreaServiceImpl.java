@@ -27,7 +27,7 @@ public class AreaServiceImpl implements AreaService {
 	public DepartmentResponse getDepartment(long id) {
 		Map<String, Object> vars = new HashMap<>();
 	    vars.put("id", id);
-		return restTemplate.getForObject("http://" + apiAreasServiceName + "/ms-hr-areas/v1/departments/custom/{id}", DepartmentResponse.class, vars);
+		return restTemplate.getForObject("http://" + apiAreasServiceName + "/departments/custom/{id}", DepartmentResponse.class, vars);
 	}
 
 }

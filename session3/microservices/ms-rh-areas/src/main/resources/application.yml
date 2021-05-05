@@ -13,9 +13,7 @@ spring:
       hibernate.format_sql: true
 
 server:
-  servlet:
-    context-path: /ms-hr-areas/v1
-  port: 9092
+  port: 9091
 
 eureka:
   instance:

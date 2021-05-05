@@ -14,9 +14,7 @@ spring:
         enabled: false
 
 server:
-  servlet:
-    context-path: /ms-hr-employees/v1
-  port: 9091
+  port: 9092
 
 api:
   support:

@@ -1,0 +1,35 @@
+spring:
+  application:
+    name: ms-hr-gateway-service
+  cloud:
+    gateway:
+      routes:
+      - id: ms-human-resources-areas
+        uri: lb://MS-HR-AREAS
+        predicates:
+          - Path=/api/hr/areas/**
+        filters:
+          - RewritePath=/api/hr/areas(?<segment>/?.*), $\{segment}
+      - id: ms-human-resources-employees
+        uri: lb://MS-HR-EMPLOYEES
+        predicates:
+          - Path=/api/hr/payroll/**
+        filters:
+          - RewritePath=/api/hr/payroll(?<segment>/?.*), $\{segment}
+
+server:
+  port: 9090 
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*'
+ 
