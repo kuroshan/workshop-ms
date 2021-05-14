@@ -564,6 +564,70 @@
 					"_postman_isSubFolder": true
 				}
 			]
+		},
+		{
+			"name": "session3",
+			"description": "",
+			"item": [
+				{
+					"name": "discovery server",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:8761",
+							"request": {
+								"url": "http://localhost:8761",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "zuul server",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:9090/actuator/routes/details",
+							"request": {
+								"url": "http://localhost:9090/actuator/routes/details",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "area - custom",
+							"request": {
+								"url": "http://localhost:9090/api/hr/areas/departments/custom/10",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "employees - id",
+							"request": {
+								"url": "http://localhost:9090/api/hr/payroll/employees/101",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
 		}
 	]
 }

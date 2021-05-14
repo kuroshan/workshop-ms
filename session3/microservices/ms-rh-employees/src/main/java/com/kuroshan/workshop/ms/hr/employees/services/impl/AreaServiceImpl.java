@@ -36,7 +36,7 @@ public class AreaServiceImpl implements AreaService {
 		CircuitBreaker circuitBreaker = circuitBreakerFactory.create("cb-areas-service");
 		Map<String, Object> vars = new HashMap<>();
 	    vars.put("id", id);
-		return circuitBreaker.run(() -> restTemplate.getForObject("http://" + apiAreasServiceName + "/ms-hr-areas/v1/departments/custom/{id}", DepartmentResponse.class, vars), 
+		return circuitBreaker.run(() -> restTemplate.getForObject("http://" + apiAreasServiceName + "/departments/custom/{id}", DepartmentResponse.class, vars), 
 								  throwable -> {
 									  	log.error(throwable.getMessage(), throwable);
 									  	return defaultDepartment();
