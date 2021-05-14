@@ -16,6 +16,9 @@ public class AreaServiceImpl implements AreaService {
 	
 	@Value("${api.support.ms-human-resources-areas.url:http://localhost:8082/ms-hr-areas/v1}")
 	private String apiSupportMsHumanResourcesAreas;
+	
+	@Value("${api.areas-service.name}")
+	private String apiAreasServiceName;
 
 	@Autowired
 	private RestTemplate restTemplate;
@@ -24,7 +27,7 @@ public class AreaServiceImpl implements AreaService {
 	public DepartmentResponse getDepartment(long id) {
 		Map<String, Object> vars = new HashMap<>();
 	    vars.put("id", id);
-		return restTemplate.getForObject(apiSupportMsHumanResourcesAreas + "/departments/custom/{id}", DepartmentResponse.class, vars);
+		return restTemplate.getForObject("http://" + apiAreasServiceName + "/ms-hr-areas/v1/departments/custom/{id}", DepartmentResponse.class, vars);
 	}
 
 }
