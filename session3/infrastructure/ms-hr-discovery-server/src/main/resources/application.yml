@@ -6,6 +6,8 @@ server:
   port: 8761
 
 eureka:
+  server:
+    responseCacheUpdateInvervalMs: 1000
   instance:
     hostname: localhost
   client:
