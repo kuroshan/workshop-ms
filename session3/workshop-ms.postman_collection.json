@@ -626,6 +626,57 @@
 						}
 					],
 					"_postman_isSubFolder": true
+				},
+				{
+					"name": "config-server",
+					"description": "",
+					"item": [
+						{
+							"name": "ms-hr-discovery-server - default",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-discovery-server/default",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "ms-hr-discovery-server - dev",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-discovery-server/dev",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "ms-hr-areas - default",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-areas/default",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "ms-hr-areas  - dev",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-areas/dev",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
 				}
 			]
 		}
