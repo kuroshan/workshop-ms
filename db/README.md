@@ -19,3 +19,6 @@ sqlplus sys/oracle@//localhost:1521/XE as sysdba
 # @/home/mksample <SYSTEM_password> <SYS_password> <HR_password> EXAMPLE TEMP $ORACLE_HOME/demo/schema/log/ localhost:1521/pdb
 @/home/workshop_ms.sql oracle oracle hrpw SYSTEM TEMP /home/log/ localhost:1521/XE
 
+
+docker pull mysql:8.0.24 
+docker run -d -p 3306:3306 --name ms-mysql -e MYSQL_ROOT_PASSWORD=secret -e MYSQL_DATABASE=securitydb -e MYSQL_USER=admin -e MYSQL_PASSWORD=mysql mysql:8.0.24

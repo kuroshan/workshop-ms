@@ -5,7 +5,7 @@ spring:
       hibernate.format_sql: false
 
 server:
-  port: 9092
+  port: 9091
 
 eureka:
   client:
