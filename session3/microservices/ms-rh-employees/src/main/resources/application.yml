@@ -22,9 +22,6 @@ server:
   port: 8883
 
 api:
-  support:
-    ms-human-resources-areas:
-      url: http://localhost:9092/ms-hr-areas/v1
   areas-service:
     name: ms-hr-areas
 
@@ -60,3 +57,6 @@ resilience4j.ratelimiter:
   configs:
     default:
       registerHealthIndicator: true
+
+info:
+  environment: local

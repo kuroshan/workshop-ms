@@ -19,9 +19,6 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 public class AreaServiceImpl implements AreaService {
 	
-	@Value("${api.support.ms-human-resources-areas.url:http://localhost:8082/ms-hr-areas/v1}")
-	private String apiSupportMsHumanResourcesAreas;
-	
 	@Value("${api.areas-service.name}")
 	private String apiAreasServiceName;
 
