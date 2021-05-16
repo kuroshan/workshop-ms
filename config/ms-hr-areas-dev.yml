@@ -1,5 +1,5 @@
 server:
-  port: 9082
+  port: 9092
 
 spring:
   jpa:
@@ -10,7 +10,7 @@ spring:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8002/eureka/
+      defaultZone: http://localhost:9001/eureka/
 
 info:
   environment: desarrollo

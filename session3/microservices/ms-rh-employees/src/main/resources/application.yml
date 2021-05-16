@@ -1,6 +1,8 @@
 spring:
   application:
     name: ms-hr-employees
+  config:
+    import: optional:configserver:http://localhost:8888
   datasource:
     url: jdbc:oracle:thin:@//localhost:1521/XE
     username: hr
@@ -17,7 +19,7 @@ spring:
         enabled: false
 
 server:
-  port: 9091
+  port: 8883
 
 api:
   support:

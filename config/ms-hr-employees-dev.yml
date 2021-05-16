@@ -1,16 +1,16 @@
-server:
-  port: 9083
-
 spring:
   jpa:
     show-sql: false
     properties:
       hibernate.format_sql: false
 
+server:
+  port: 9093
+
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8002/eureka/
+      defaultZone: http://localhost:9001/eureka/
 
 info:
   environment: desarrollo

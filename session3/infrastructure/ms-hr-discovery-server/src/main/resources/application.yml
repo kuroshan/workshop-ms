@@ -1,13 +1,13 @@
 spring:
   application:
     name: ms-hr-discovery-server
+  config:
+    import: optional:configserver:http://localhost:8888
 
 server:
   port: 8761
 
 eureka:
-  server:
-    responseCacheUpdateInvervalMs: 1000
   instance:
     hostname: localhost
   client:
@@ -15,3 +15,6 @@ eureka:
     fetchRegistry: false
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+info:
+  environment: local
