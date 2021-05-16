@@ -16,7 +16,7 @@ zuul:
   routes:
     ms-human-resources-users:
       service-id: MS-HR-USERS
-      path: /hr/users/**
+      path: /hr/**
       strip-prefix: true
     ms-human-resources-areas:
       service-id: MS-HR-AREAS

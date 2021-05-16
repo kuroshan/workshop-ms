@@ -10,7 +10,7 @@ import com.kuroshan.workshop.ms.hr.users.controllers.response.UserResponse;
 import com.kuroshan.workshop.ms.hr.users.services.UserService;
 
 @RestController
-@RequestMapping(value = "/")
+@RequestMapping(value = "/users")
 public class UserController {
 	
 	@Autowired
