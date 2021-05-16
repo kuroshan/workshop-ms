@@ -16,7 +16,7 @@ zuul:
   routes:
     ms-human-resources-users:
       service-id: MS-HR-USERS
-      path: /hr/**
+      path: /hr/authorization/**
       strip-prefix: true
     ms-human-resources-areas:
       service-id: MS-HR-AREAS
@@ -28,7 +28,7 @@ zuul:
       strip-prefix: true
     ms-human-resources-security:
       service-id: MS-HR-SECURITY-SERVICE
-      path: /hr/security/**
+      path: /hr/authentication/**
       strip-prefix: true
       sensitive-headers:
         - Cookie
