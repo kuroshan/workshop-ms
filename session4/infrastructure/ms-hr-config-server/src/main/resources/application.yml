@@ -7,6 +7,6 @@ spring:
       server:
         git:
           uri: https://github.com/kuroshan/workshop-ms
-          defaultLabel: 14-config-server
+          defaultLabel: 15-security-server
           searchPaths: 
             - config
