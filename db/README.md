@@ -1,5 +1,5 @@
 docker pull wnameless/oracle-xe-11g-r2
-docker run --name ms-oracle -d -p 1521:1521 -p 8081:8080 wnameless/oracle-xe-11g-r2
+docker run --name ms-oracle -d -p 1521:1521 wnameless/oracle-xe-11g-r2
 docker exec -it ms-oracle /bin/bash
 sqlplus sys/oracle@//localhost:1521/XE as sysdba
 
