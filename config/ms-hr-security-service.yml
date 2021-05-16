@@ -17,7 +17,7 @@ eureka:
 security:
   oauth:
     client:
-      id: client_app
+      id: client_hr_app
       secrect: basic_secrect_key
     jwt:
       key: token_secrect_key
