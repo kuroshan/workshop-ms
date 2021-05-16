@@ -1,3 +1,9 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
 server:
   port: 8989
 
