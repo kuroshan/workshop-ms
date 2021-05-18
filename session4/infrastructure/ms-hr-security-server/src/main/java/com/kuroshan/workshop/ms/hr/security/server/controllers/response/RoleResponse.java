@@ -1,5 +1,7 @@
 package com.kuroshan.workshop.ms.hr.security.server.controllers.response;
 
+import java.io.Serializable;
+
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;
@@ -15,7 +17,7 @@ import lombok.ToString;
 @Builder
 @EqualsAndHashCode
 @ToString
-public class RoleResponse {
+public class RoleResponse implements Serializable {
 	private long id;
 	private String name;
 }

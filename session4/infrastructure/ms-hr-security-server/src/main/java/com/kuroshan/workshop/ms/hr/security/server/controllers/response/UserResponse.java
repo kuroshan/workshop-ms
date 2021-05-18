@@ -1,5 +1,6 @@
 package com.kuroshan.workshop.ms.hr.security.server.controllers.response;
 
+import java.io.Serializable;
 import java.util.List;
 
 import lombok.AllArgsConstructor;
@@ -17,7 +18,7 @@ import lombok.ToString;
 @Builder
 @EqualsAndHashCode
 @ToString
-public class UserResponse {
+public class UserResponse implements Serializable {
 	private long id;
 	private String username;
 	private String password;
