@@ -42,6 +42,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 
 	// SPRING-SECURITY (1)
 	@Override
+	@Cacheable(value= "UserServiceImpl.loadUserByUsername", key= "{#username}")
 	public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
 		UserResponse userResponse = findByUsername(username);
 
