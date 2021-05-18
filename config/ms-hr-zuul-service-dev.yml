@@ -6,5 +6,10 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:9001/eureka/
 
+security:
+  oauth:
+    jwt:
+      key: token_secrect_dev_key
+
 info:
   environment: desarrollo
