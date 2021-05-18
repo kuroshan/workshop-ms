@@ -19,7 +19,7 @@ spring:
         max-wait: 60s
 
 server:
-  port: 8989
+  port: 8080
 
 api:
   users-service:
