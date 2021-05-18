@@ -33,7 +33,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	private RestTemplate restTemplate;
 
 	@Override
-	@Cacheable(value= "UserServiceImpl.findByUsername", key= "{#p0}")
+	@Cacheable(value= "UserServiceImpl.findByUsername", key= "{#username}")
 	public UserResponse findByUsername(String username) {
 		Map<String, Object> params = new HashMap<>();
 		params.put("username", username);
