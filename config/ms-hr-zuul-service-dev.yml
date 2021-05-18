@@ -4,7 +4,7 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: $SPRING_DISCOVERY_SERVER_URI
+      defaultZone: ${SPRING_DISCOVERY_SERVER_URI}
 
 security:
   oauth:
