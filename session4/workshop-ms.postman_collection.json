@@ -768,7 +768,7 @@
 							"name": "users",
 							"request": {
 								"url": {
-									"raw": "http://localhost:8080/api/hr/security/users?username=useradmin",
+									"raw": "http://localhost:8080/api/hr/authorization/users?username=useradmin",
 									"protocol": "http",
 									"host": [
 										"localhost"
@@ -777,7 +777,7 @@
 									"path": [
 										"api",
 										"hr",
-										"security",
+										"authorization",
 										"users"
 									],
 									"query": [
@@ -794,11 +794,71 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1OTM1NTgzOTcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiYWY1ZDA5MTEtMDI2Ny00YTMzLWFiNjUtODM1NWExY2FiNDc2IiwiZW1haWwiOiJhZG1pbkBrdXJvc2hhbi5jb20iLCJjbGllbnRfaWQiOiJjbGllbnRhcHAifQ.OPHlgOoYELdPfx43adi9H9S6qWfH0iiyYUwXx5Kk9Q4",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxMzA4NjYxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjFmNzQ5OGQyLTY5ODQtNDg3OC1iZWQ4LTM3NmFhM2I3YTE5ZiIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ.r1bdaE5ftS8ZUoGQkNNsOHu7w-jKgVxy7zsrXwfbaCw",
 										"description": ""
 									}
 								],
 								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "security-server",
+					"description": "",
+					"item": [
+						{
+							"name": "/oauth/token",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"username": "client_hr_app",
+										"password": "basic_secrect_key",
+										"saveHelperData": true,
+										"showPassword": false
+									}
+								},
+								"url": "http://localhost:8080/api/hr/authentication/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic Y2xpZW50X2hyX2FwcDpiYXNpY19zZWNyZWN0X2tleQ==",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
 								"description": ""
 							},
 							"response": []
