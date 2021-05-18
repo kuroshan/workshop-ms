@@ -7,6 +7,7 @@ import java.util.stream.Collectors;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.User;
@@ -32,6 +33,7 @@ public class UserServiceImpl implements UserService, UserDetailsService {
 	private RestTemplate restTemplate;
 
 	@Override
+	@Cacheable(value= "UserServiceImpl.findByUsername", key= "{#p0}")
 	public UserResponse findByUsername(String username) {
 		Map<String, Object> params = new HashMap<>();
 		params.put("username", username);
