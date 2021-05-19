@@ -10,7 +10,7 @@
 	</parent>
 	<groupId>com.kuroshan.workshop.ms.hr</groupId>
 	<artifactId>ms-hr-security-server</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<name>ms-hr-security-server</name>
 	<description>HR Microservice Security Server - OAuth2</description>
 	<properties>
