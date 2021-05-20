@@ -747,7 +747,13 @@
 							"request": {
 								"url": "http://localhost:8080/api/hr/areas/departments/custom/10",
 								"method": "GET",
-								"header": [],
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE0MDYzMjMsInVzZXJfbmFtZSI6InVzZXJociIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJhZDVhNjZmZi05MzExLTQzMWMtOGRiZC1lMDI4NGI2YWNkMGYiLCJjbGllbnRfaWQiOiJjbGllbnRfaHJfYXBwIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.nqML2_lmCufh-q6nf4JwwIpa59UUSmJLMCii2yTkjdI",
+										"description": ""
+									}
+								],
 								"body": {},
 								"description": ""
 							},
@@ -794,7 +800,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxMzA4NjYxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjFmNzQ5OGQyLTY5ODQtNDg3OC1iZWQ4LTM3NmFhM2I3YTE5ZiIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ.r1bdaE5ftS8ZUoGQkNNsOHu7w-jKgVxy7zsrXwfbaCw",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE0MDY2NjcsInVzZXJfbmFtZSI6InVzZXJociIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJjYjg2ZGExMy1iNDY1LTRkZjgtOTY3MS02M2RjYWQ0YTQwMWIiLCJjbGllbnRfaWQiOiJjbGllbnRfaHJfYXBwIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.V49s1w_sZhoQEJDpON8Z3kwyX9owmEKSB7HIP8Cit3A",
 										"description": ""
 									}
 								],
@@ -802,14 +808,7 @@
 								"description": ""
 							},
 							"response": []
-						}
-					],
-					"_postman_isSubFolder": true
-				},
-				{
-					"name": "security-server",
-					"description": "",
-					"item": [
+						},
 						{
 							"name": "/oauth/token",
 							"request": {
@@ -841,6 +840,66 @@
 									"urlencoded": [
 										{
 											"key": "username",
+											"value": "userhr",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "security-server",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:8989/oauth/token",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"username": "client_hr_app",
+										"password": "basic_secrect_key",
+										"saveHelperData": true,
+										"showPassword": false
+									}
+								},
+								"url": "http://localhost:8989/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic Y2xpZW50X2hyX2FwcDpiYXNpY19zZWNyZWN0X2tleQ==",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
 											"value": "useradmin",
 											"description": "",
 											"type": "text"
@@ -859,6 +918,201 @@
 										}
 									]
 								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "session5",
+			"description": "",
+			"item": [
+				{
+					"name": "dev",
+					"description": "",
+					"item": [
+						{
+							"name": "oauth - token - WITHOUT ROLE",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"username": "client_hr_app",
+										"password": "basic_secrect_dev_key",
+										"saveHelperData": true,
+										"showPassword": false
+									}
+								},
+								"url": "http://localhost:9090/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic Y2xpZW50X2hyX2FwcDpiYXNpY19zZWNyZWN0X2Rldl9rZXk=",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "area - departments - WITHOUT ROLE",
+							"request": {
+								"url": "http://localhost:8080/api/hr/areas/departments",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyaHIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMTAzLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNjUxZDM0YmQtYmVlNy00NjY4LThlMmQtOTE2ZjBhOGQyNWJlIiwiZW1haWwiOiJ1c2VyaHJAa3Vyb3NoYW4uY29tIiwiY2xpZW50X2lkIjoiY2xpZW50X2hyX2FwcCJ9.w8o9o3gAG0t6L30NbLg_MIPGGhoy2GbsnUMO6uKiJ8U",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "area - departments - custom - ANY ROLE",
+							"request": {
+								"url": "http://localhost:8080/api/hr/areas/departments/custom/10",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyaHIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMTAzLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNjUxZDM0YmQtYmVlNy00NjY4LThlMmQtOTE2ZjBhOGQyNWJlIiwiZW1haWwiOiJ1c2VyaHJAa3Vyb3NoYW4uY29tIiwiY2xpZW50X2lkIjoiY2xpZW50X2hyX2FwcCJ9.w8o9o3gAG0t6L30NbLg_MIPGGhoy2GbsnUMO6uKiJ8U",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "employees - id - ANY ROLE",
+							"request": {
+								"url": "http://localhost:8080/api/hr/payroll/employees/101",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyaHIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMTAzLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNjUxZDM0YmQtYmVlNy00NjY4LThlMmQtOTE2ZjBhOGQyNWJlIiwiZW1haWwiOiJ1c2VyaHJAa3Vyb3NoYW4uY29tIiwiY2xpZW50X2lkIjoiY2xpZW50X2hyX2FwcCJ9.w8o9o3gAG0t6L30NbLg_MIPGGhoy2GbsnUMO6uKiJ8U",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "users - userhr - ONLY ROLE_USER",
+							"request": {
+								"url": {
+									"raw": "http://localhost:8080/api/hr/authorization/users?username=userhr",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"hr",
+										"authorization",
+										"users"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "userhr",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMzU2LCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjBiZTE0NWIwLTA2NTctNDVjZi05OTRmLWUwNjM3ZDljYTI0YiIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ._RSDkz2Z5I9ZlQFzXfLePSvQUNDWANrBHJ4y_tZ-llg",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "users - useradmin - ONLY ROLE_ADMIN",
+							"request": {
+								"url": {
+									"raw": "http://localhost:8080/api/hr/authorization/users?username=useradmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"hr",
+										"authorization",
+										"users"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMzU2LCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjBiZTE0NWIwLTA2NTctNDVjZi05OTRmLWUwNjM3ZDljYTI0YiIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ._RSDkz2Z5I9ZlQFzXfLePSvQUNDWANrBHJ4y_tZ-llg",
+										"description": ""
+									}
+								],
+								"body": {},
 								"description": ""
 							},
 							"response": []
