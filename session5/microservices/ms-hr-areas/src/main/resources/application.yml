@@ -2,7 +2,7 @@ spring:
   application:
     name: ms-hr-areas
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:${SPRING_CONFIG_SERVER_URI:http://localhost:8888/}
   datasource:
     url: jdbc:oracle:thin:@//localhost:1521/XE
     username: hr

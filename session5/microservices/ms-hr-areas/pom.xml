@@ -10,7 +10,7 @@
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kuroshan.workshop.ms.hr</groupId>
-	<artifactId>ms-rh-areas</artifactId>
+	<artifactId>ms-hr-areas</artifactId>
 	<version>1.0.0</version>
 	<name>ms-rh-areas</name>
 	<description>HR Microservice Areas</description>

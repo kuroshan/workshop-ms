@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.kuroshan.workshop.ms.hr</groupId>
-	<artifactId>ms-rh-employees</artifactId>
+	<artifactId>ms-hr-employees</artifactId>
 	<version>1.0.0</version>
 	<name>ms-rh-employees</name>
 	<description>HR Microservice Employees</description>
