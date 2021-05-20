@@ -1,0 +1,3 @@
+FROM mysql:8.0.24
+VOLUME "/tmp"
+EXPOSE 3306
