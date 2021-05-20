@@ -20,7 +20,10 @@ docker build -t ms-hr-users:v1 ./microservices/ms-hr-users/.
 docker build -t ms-hr-areas:v1 ./microservices/ms-hr-areas/.
 docker build -t ms-hr-employees:v1 ./microservices/ms-hr-employees/.
 
-docker run -d --name ms-hr-config-server-v1 --network workshopms -p 8888:8080 ms-hr-config-server:v1
+docker run -d --name ms-hr-config-server-v1 --network workshopms -p 8888:8080 \
+-e SPRING_CONFIG_SERVER_GIT_URI=https://github.com/kuroshan/workshop-ms \
+-e SPRING_CONFIG_SERVER_GIT_BRANCH=16-container \
+ms-hr-config-server:v1
 
 docker run -d --name ms-hr-discovery-server-v1 --network workshopms -p 8761:8080 \
 -e SPRING_PROFILES_ACTIVE=dev  \

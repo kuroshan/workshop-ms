@@ -6,7 +6,7 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/kuroshan/workshop-ms
-          defaultLabel: 16-container
+          uri: ${SPRING_CONFIG_SERVER_GIT_URI}
+          defaultLabel: ${SPRING_CONFIG_SERVER_GIT_BRANCH}
           searchPaths: 
             - config
