@@ -2,8 +2,6 @@
 *      DOCKERFILE      *
 ************************
 
-docker network create --driver bridge workshopms 
-
 mvn clean package -DskipTests -f ./infrastructure/ms-hr-config-server
 mvn clean package -DskipTests -f ./infrastructure/ms-hr-discovery-server
 mvn clean package -DskipTests -f ./infrastructure/ms-hr-zuul-server
@@ -11,6 +9,8 @@ mvn clean package -DskipTests -f ./infrastructure/ms-hr-security-server
 mvn clean package -DskipTests -f ./microservices/ms-hr-users
 mvn clean package -DskipTests -f ./microservices/ms-hr-areas
 mvn clean package -DskipTests -f ./microservices/ms-hr-employees
+
+docker network create --driver bridge workshopms 
 
 docker build -t ms-hr-config-server:v1 ./infrastructure/ms-hr-config-server/.
 docker build -t ms-hr-discovery-server:v1 ./infrastructure/ms-hr-discovery-server/.
