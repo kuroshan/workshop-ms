@@ -22,6 +22,10 @@ docker build -t ms-hr-users:v1 ./microservices/ms-hr-users/.
 docker build -t ms-hr-areas:v1 ./microservices/ms-hr-areas/.
 docker build -t ms-hr-employees:v1 ./microservices/ms-hr-employees/.
 
+************************
+*        DOCKER        *
+************************
+
 docker network create --driver bridge workshopms
 
 docker run -d --name database-mysql-dev --network workshopms -p 3306:3306 \
@@ -100,3 +104,21 @@ ms-hr-users:v1 ms-hr-areas:v1 ms-hr-employees:v1 \
 database-mysql:v1 database-redis:v1 database-oracle:v1
 
 docker network rm workshopms
+
+************************
+*    DOCKER-COMPOSE    *
+************************
+
+docker-compose --version
+
+# docker-compose up -d
+
+docker-compose -f ./database/docker-compose.yml up -d
+docker-compose -f ./infrastructure/docker-compose.yml up -d
+docker-compose -f ./microservices/docker-compose.yml up -d
+
+docker-compose -f ./microservices/docker-compose.yml down
+docker-compose -f ./infrastructure/docker-compose.yml down
+docker-compose -f ./database/docker-compose.yml down
+
+docker-compose -f ./microservices/docker-compose.yml up -d --scale ms-hr-areas=2

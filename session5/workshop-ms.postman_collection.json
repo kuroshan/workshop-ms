@@ -993,13 +993,7 @@
 							"request": {
 								"url": "http://localhost:8080/api/hr/areas/departments",
 								"method": "GET",
-								"header": [
-									{
-										"key": "Authorization",
-										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyaHIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMTAzLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNjUxZDM0YmQtYmVlNy00NjY4LThlMmQtOTE2ZjBhOGQyNWJlIiwiZW1haWwiOiJ1c2VyaHJAa3Vyb3NoYW4uY29tIiwiY2xpZW50X2lkIjoiY2xpZW50X2hyX2FwcCJ9.w8o9o3gAG0t6L30NbLg_MIPGGhoy2GbsnUMO6uKiJ8U",
-										"description": ""
-									}
-								],
+								"header": [],
 								"body": {},
 								"description": ""
 							},
@@ -1013,7 +1007,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyaHIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMTAzLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNjUxZDM0YmQtYmVlNy00NjY4LThlMmQtOTE2ZjBhOGQyNWJlIiwiZW1haWwiOiJ1c2VyaHJAa3Vyb3NoYW4uY29tIiwiY2xpZW50X2lkIjoiY2xpZW50X2hyX2FwcCJ9.w8o9o3gAG0t6L30NbLg_MIPGGhoy2GbsnUMO6uKiJ8U",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTU3NzUxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjIyNzcyMTg3LTJhMjYtNDI3OC05ODVmLWU1Y2E5ZmM1YWQ4NyIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ.Mj3O8BOV4mfW4A9slgABq87LEVuQfsdnf8MckwBgH8Y",
 										"description": ""
 									}
 								],
@@ -1030,7 +1024,7 @@
 								"header": [
 									{
 										"key": "Authorization",
-										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyaHIiLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMTAzLCJhdXRob3JpdGllcyI6WyJST0xFX1VTRVIiXSwianRpIjoiNjUxZDM0YmQtYmVlNy00NjY4LThlMmQtOTE2ZjBhOGQyNWJlIiwiZW1haWwiOiJ1c2VyaHJAa3Vyb3NoYW4uY29tIiwiY2xpZW50X2lkIjoiY2xpZW50X2hyX2FwcCJ9.w8o9o3gAG0t6L30NbLg_MIPGGhoy2GbsnUMO6uKiJ8U",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTU3NzUxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjIyNzcyMTg3LTJhMjYtNDI3OC05ODVmLWU1Y2E5ZmM1YWQ4NyIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ.Mj3O8BOV4mfW4A9slgABq87LEVuQfsdnf8MckwBgH8Y",
 										"description": ""
 									}
 								],
@@ -1040,7 +1034,7 @@
 							"response": []
 						},
 						{
-							"name": "users - userhr - ONLY ROLE_USER",
+							"name": "users - userhr - ONLY ROLE_ADMIN",
 							"request": {
 								"url": {
 									"raw": "http://localhost:8080/api/hr/authorization/users?username=userhr",

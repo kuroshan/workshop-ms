@@ -1,0 +1,73 @@
+version: '3.7'
+services:
+  ms-hr-config-server:
+    image: ms-hr-config-server:v1
+    container_name: ms-hr-config-server-v1
+    ports: 
+      - "8888:8080"
+    restart: always
+    environment:
+      SPRING_CONFIG_SERVER_GIT_URI: https://github.com/kuroshan/workshop-ms
+      SPRING_CONFIG_SERVER_GIT_BRANCH: 16-container
+    networks: 
+      - workshopms
+  ms-hr-discovery-server:
+    image: ms-hr-discovery-server:v1
+    container_name: ms-hr-discovery-server-v1
+    ports: 
+      - "8761:8080"
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_CLOUD_CONFIG_FAIL-FAST: 'true'
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: '30'
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1500
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.5
+      SPRING_CONFIG_SERVER_URI: http://ms-hr-config-server-v1:8080/
+    depends_on: 
+      - ms-hr-config-server
+    networks: 
+      - workshopms
+  ms-hr-security-server:
+    image: ms-hr-security-server:v1
+    container_name: ms-hr-security-server-v1
+    ports: 
+      - "9090:8080"
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_CLOUD_CONFIG_FAIL-FAST: 'true'
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: '30'
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1500
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.5
+      SPRING_CONFIG_SERVER_URI: http://ms-hr-config-server-v1:8080/
+      SPRING_DISCOVERY_SERVER_URI: http://ms-hr-discovery-server-v1:8080/eureka/
+      SPRING_REDIS_HOST: database-redis-dev
+    depends_on: 
+      - ms-hr-config-server
+      - ms-hr-discovery-server
+    networks: 
+      - workshopms
+  ms-hr-zuul-server:
+    image: ms-hr-zuul-server:v1
+    container_name: ms-hr-zuul-server-v1
+    ports: 
+      - "8080:8080"
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_CLOUD_CONFIG_FAIL-FAST: 'true'
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: '30'
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1500
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.5
+      SPRING_CONFIG_SERVER_URI: http://ms-hr-config-server-v1:8080/
+      SPRING_DISCOVERY_SERVER_URI: http://ms-hr-discovery-server-v1:8080/eureka/
+    depends_on: 
+      - ms-hr-config-server
+      - ms-hr-discovery-server
+    networks: 
+      - workshopms
+networks: 
+  workshopms:
+    external: 
+      name: workshopms-net-dev
