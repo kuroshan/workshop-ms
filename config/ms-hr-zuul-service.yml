@@ -14,6 +14,10 @@ zuul:
   ignoredServices: '*'
   prefix: /api
   routes:
+    ms-human-resources-users:
+      service-id: MS-HR-USERS
+      path: /hr/authorization/**
+      strip-prefix: true
     ms-human-resources-areas:
       service-id: MS-HR-AREAS
       path: /hr/areas/**
@@ -22,12 +26,28 @@ zuul:
       service-id: MS-HR-EMPLOYEES
       path: /hr/payroll/**
       strip-prefix: true
+    ms-human-resources-security:
+      service-id: MS-HR-SECURITY-SERVICE
+      path: /hr/authentication/**
+      strip-prefix: true
+      sensitive-headers:
+        - Cookie
+        - Set-Cookie
+
+ribbon:
+  ConnectTimeout: 3000
+  ReadTimeout: 5000
 
 management:
   endpoints:
     web:
       exposure:
         include: '*'
+
+security:
+  oauth:
+    jwt:
+      key: token_secrect_key
 
 info:
   environment: predeterminado

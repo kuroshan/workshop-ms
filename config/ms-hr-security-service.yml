@@ -1,0 +1,46 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+  cache:
+    type: redis
+    redis:
+      cache-null-values: false
+      time-to-live: 360s
+  redis:
+    host: localhost
+    port: 6379
+    jedis:
+      pool:
+        max-active: 500
+        max-idle: 10
+        min-idle: 1
+        max-wait: 60s
+
+server:
+  port: 8989
+
+api:
+  users-service:
+    name: ms-hr-users
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseExpirationDurationInSeconds: 1
+  client:
+    registryFetchIntervalSeconds: 1
+    serviceUrl:
+      defaultZone: http://localhost:8001/eureka/
+
+security:
+  oauth:
+    client:
+      id: client_hr_app
+      secrect: basic_secrect_key
+    jwt:
+      key: token_secrect_key
+
+info:
+  environment: predeterminado

@@ -1,0 +1,23 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+server:
+  port: 9898
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:9001/eureka/
+
+security:
+  oauth:
+    client:
+      secrect: basic_secrect_dev_key
+    jwt:
+      key: token_secrect_dev_key
+
+info:
+  environment: desarrollo

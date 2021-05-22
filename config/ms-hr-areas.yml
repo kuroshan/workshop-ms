@@ -1,6 +1,3 @@
-server:
-  port: 8082
-
 spring:
   datasource:
     url: jdbc:oracle:thin:@//localhost:1521/XE
@@ -12,6 +9,9 @@ spring:
     show-sql: true
     properties:
       hibernate.format_sql: true
+
+server:
+  port: 8082
 
 eureka:
   instance:

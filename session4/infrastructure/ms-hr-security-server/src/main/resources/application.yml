@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    loadbalancer:
+      ribbon:
+        enabled: false
+
+server:
+  port: 7777
+
+api:
+  users-service:
+    name: ms-hr-users
+
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
+    leaseExpirationDurationInSeconds: 1
+  client:
+    registryFetchIntervalSeconds: 1
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+
+security:
+  oauth:
+    client:
+      id: client_hr_app
+      secrect: basic_secrect_key
+    jwt:
+      key: token_secrect_key
+
+info:
+  environment: local
