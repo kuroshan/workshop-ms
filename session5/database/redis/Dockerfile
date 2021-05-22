@@ -1,0 +1,3 @@
+FROM redis:6.2.3
+VOLUME "/tmp"
+EXPOSE 6379

@@ -8,7 +8,7 @@ eureka:
   client:
     registryFetchIntervalSeconds: 1
     serviceUrl:
-      defaultZone: http://localhost:8001/eureka/
+      defaultZone: ${SPRING_DISCOVERY_SERVER_URI}
 
 zuul:
   ignoredServices: '*'

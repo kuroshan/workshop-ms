@@ -1,0 +1,1120 @@
+{
+	"variables": [],
+	"info": {
+		"name": "workshop-ms",
+		"_postman_id": "aa1bb666-275c-eb5b-2d14-4a9378110df2",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "session1",
+			"description": "",
+			"item": [
+				{
+					"name": "spring xml",
+					"description": "",
+					"item": [
+						{
+							"name": "find all persons",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-xml/persons",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "find person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-xml/persons/1",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "register person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-xml/persons",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first-name\": \"Jaime 2\",\n\t\"last-name\": \"Jaime 3\",\n\t\"age\": 25,\n\t\"type-document\": \"dni\",\n\t\"codigo-document\": \"123456789\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "update person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-xml/persons/1",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first-name\": \"Klary\",\n\t\"last-name\": \"Lozano 2\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "delete person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-xml/persons/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "spring annotations",
+					"description": "",
+					"item": [
+						{
+							"name": "find all persons",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-annotations/persons",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "find person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-annotations/persons/1",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "register person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-annotations/persons",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first-name\": \"Jaime 4\",\n\t\"last-name\": \"Jaime 5\",\n\t\"age\": 25,\n\t\"type-document\": \"dni\",\n\t\"codigo-document\": \"123456789\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "update person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-annotations/persons/1",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first-name\": \"Klary\",\n\t\"last-name\": \"Lozano 2\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "delete person",
+							"request": {
+								"url": "http://localhost:8080/ms-dummy-annotations/persons/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "spring boot",
+					"description": "",
+					"item": [
+						{
+							"name": "find all persons",
+							"request": {
+								"url": "http://localhost:8080/persons",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "find person",
+							"request": {
+								"url": "http://localhost:8080/persons/1",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "register person",
+							"request": {
+								"url": "http://localhost:8080/persons",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first-name\": \"Jaime 4\",\n\t\"last-name\": \"Jaime 5\",\n\t\"age\": 25,\n\t\"type-document\": \"dni\",\n\t\"codigo-document\": \"123456789\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "update person",
+							"request": {
+								"url": "http://localhost:8080/persons/1",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n\t\"first-name\": \"Klary\",\n\t\"last-name\": \"Lozano 2\"\n}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "delete person",
+							"request": {
+								"url": "http://localhost:8080/persons/1",
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "actuator",
+					"description": "",
+					"item": [
+						{
+							"name": "actuator",
+							"request": {
+								"url": "http://localhost:8080/actuator",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "info",
+							"request": {
+								"url": "http://localhost:8080/actuator/info",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "health",
+							"request": {
+								"url": "http://localhost:8080/actuator/health",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "loggers",
+							"request": {
+								"url": "http://localhost:8080/actuator/loggers",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "loggers - ROOT - TRACE",
+							"request": {
+								"url": "http://localhost:8080/actuator/loggers/ROOT",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\"configuredLevel\": \"TRACE\"}"
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "metrics",
+							"request": {
+								"url": "http://localhost:8080/actuator/metrics",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "system.cpu.usage",
+							"request": {
+								"url": "http://localhost:8080/actuator/metrics/system.cpu.usage",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "http.server.requests",
+							"request": {
+								"url": "http://localhost:8080/actuator/metrics/http.server.requests",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "shutdown",
+							"request": {
+								"url": "http://localhost:8080/actuator/shutdown",
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "swagger",
+					"description": "",
+					"item": [
+						{
+							"name": "ui",
+							"request": {
+								"url": "http://localhost:8080/swagger-ui.html",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "api-docs",
+							"request": {
+								"url": "http://localhost:8080/v2/api-docs",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "session2",
+			"description": "",
+			"item": [
+				{
+					"name": "employees",
+					"description": "",
+					"item": [
+						{
+							"name": "employees",
+							"request": {
+								"url": "http://localhost:9091/ms-hr-employees/v1/employees",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "employees/{id}",
+							"request": {
+								"url": "http://localhost:9091/ms-hr-employees/v1/employees/101",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "areas",
+					"description": "",
+					"item": [
+						{
+							"name": "departments/custom/10",
+							"request": {
+								"url": "http://localhost:9092/ms-hr-areas/v1/departments/custom/10",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "departments/10",
+							"request": {
+								"url": "http://localhost:9092/ms-hr-areas/v1/departments/10",
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "departments - param",
+							"request": {
+								"url": {
+									"raw": "http://localhost:9092/ms-hr-areas/v1/departments?name=as",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "9092",
+									"path": [
+										"ms-hr-areas",
+										"v1",
+										"departments"
+									],
+									"query": [
+										{
+											"key": "name",
+											"value": "as",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": ""
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "session3",
+			"description": "",
+			"item": [
+				{
+					"name": "discovery server",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:8761",
+							"request": {
+								"url": "http://localhost:8761",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "zuul server",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:9090/actuator/routes/details",
+							"request": {
+								"url": "http://localhost:9090/actuator/routes/details",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "area - custom",
+							"request": {
+								"url": "http://localhost:8080/api/hr/areas/departments/custom/10",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "employees - id",
+							"request": {
+								"url": "http://localhost:8080/api/hr/payroll/employees/101",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "config-server",
+					"description": "",
+					"item": [
+						{
+							"name": "ms-hr-discovery-server - default",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-discovery-server/default",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "ms-hr-discovery-server - dev",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-discovery-server/dev",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "ms-hr-areas - default",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-areas/default",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "ms-hr-areas  - dev",
+							"request": {
+								"url": "http://localhost:8888/ms-hr-areas/dev",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "session4",
+			"description": "",
+			"item": [
+				{
+					"name": "users",
+					"description": "",
+					"item": [
+						{
+							"name": "users",
+							"request": {
+								"url": {
+									"raw": "http://localhost:8081/users?username=useradmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8081",
+									"path": [
+										"users"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJhZG1pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJleHAiOjE1OTM1NTgzOTcsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiYWY1ZDA5MTEtMDI2Ny00YTMzLWFiNjUtODM1NWExY2FiNDc2IiwiZW1haWwiOiJhZG1pbkBrdXJvc2hhbi5jb20iLCJjbGllbnRfaWQiOiJjbGllbnRhcHAifQ.OPHlgOoYELdPfx43adi9H9S6qWfH0iiyYUwXx5Kk9Q4",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "zuul server",
+					"description": "",
+					"item": [
+						{
+							"name": "actuator/routes/details",
+							"request": {
+								"url": "http://localhost:8080/actuator/routes/details",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "area - custom",
+							"request": {
+								"url": "http://localhost:8080/api/hr/areas/departments/custom/10",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE0MDYzMjMsInVzZXJfbmFtZSI6InVzZXJociIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJhZDVhNjZmZi05MzExLTQzMWMtOGRiZC1lMDI4NGI2YWNkMGYiLCJjbGllbnRfaWQiOiJjbGllbnRfaHJfYXBwIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.nqML2_lmCufh-q6nf4JwwIpa59UUSmJLMCii2yTkjdI",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "employees - id",
+							"request": {
+								"url": "http://localhost:8080/api/hr/payroll/employees/101",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "users",
+							"request": {
+								"url": {
+									"raw": "http://localhost:8080/api/hr/authorization/users?username=useradmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"hr",
+										"authorization",
+										"users"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2MjE0MDY2NjcsInVzZXJfbmFtZSI6InVzZXJociIsImF1dGhvcml0aWVzIjpbIlJPTEVfVVNFUiJdLCJqdGkiOiJjYjg2ZGExMy1iNDY1LTRkZjgtOTY3MS02M2RjYWQ0YTQwMWIiLCJjbGllbnRfaWQiOiJjbGllbnRfaHJfYXBwIiwic2NvcGUiOlsicmVhZCIsIndyaXRlIl19.V49s1w_sZhoQEJDpON8Z3kwyX9owmEKSB7HIP8Cit3A",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "/oauth/token",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"username": "client_hr_app",
+										"password": "basic_secrect_key",
+										"saveHelperData": true,
+										"showPassword": false
+									}
+								},
+								"url": "http://localhost:8080/api/hr/authentication/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic Y2xpZW50X2hyX2FwcDpiYXNpY19zZWNyZWN0X2tleQ==",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "userhr",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				},
+				{
+					"name": "security-server",
+					"description": "",
+					"item": [
+						{
+							"name": "http://localhost:8989/oauth/token",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"username": "client_hr_app",
+										"password": "basic_secrect_key",
+										"saveHelperData": true,
+										"showPassword": false
+									}
+								},
+								"url": "http://localhost:8989/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "Basic Y2xpZW50X2hyX2FwcDpiYXNpY19zZWNyZWN0X2tleQ==",
+										"description": ""
+									},
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		},
+		{
+			"name": "session5",
+			"description": "",
+			"item": [
+				{
+					"name": "dev",
+					"description": "",
+					"item": [
+						{
+							"name": "oauth - token - WITHOUT ROLE",
+							"request": {
+								"auth": {
+									"type": "basic",
+									"basic": {
+										"username": "client_hr_app",
+										"password": "basic_secrect_dev_key",
+										"saveHelperData": true,
+										"showPassword": false
+									}
+								},
+								"url": "http://localhost:9090/oauth/token",
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/x-www-form-urlencoded",
+										"description": ""
+									},
+									{
+										"key": "Authorization",
+										"value": "Basic Y2xpZW50X2hyX2FwcDpiYXNpY19zZWNyZWN0X2Rldl9rZXk=",
+										"description": ""
+									}
+								],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "123456",
+											"description": "",
+											"type": "text"
+										},
+										{
+											"key": "grant_type",
+											"value": "password",
+											"description": "",
+											"type": "text"
+										}
+									]
+								},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "area - departments - WITHOUT ROLE",
+							"request": {
+								"url": "http://localhost:8080/api/hr/areas/departments",
+								"method": "GET",
+								"header": [],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "area - departments - custom - ANY ROLE",
+							"request": {
+								"url": "http://localhost:8080/api/hr/areas/departments/custom/10",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTU3NzUxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjIyNzcyMTg3LTJhMjYtNDI3OC05ODVmLWU1Y2E5ZmM1YWQ4NyIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ.Mj3O8BOV4mfW4A9slgABq87LEVuQfsdnf8MckwBgH8Y",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "employees - id - ANY ROLE",
+							"request": {
+								"url": "http://localhost:8080/api/hr/payroll/employees/101",
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTU3NzUxLCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjIyNzcyMTg3LTJhMjYtNDI3OC05ODVmLWU1Y2E5ZmM1YWQ4NyIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ.Mj3O8BOV4mfW4A9slgABq87LEVuQfsdnf8MckwBgH8Y",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "users - userhr - ONLY ROLE_ADMIN",
+							"request": {
+								"url": {
+									"raw": "http://localhost:8080/api/hr/authorization/users?username=userhr",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"hr",
+										"authorization",
+										"users"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "userhr",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMzU2LCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjBiZTE0NWIwLTA2NTctNDVjZi05OTRmLWUwNjM3ZDljYTI0YiIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ._RSDkz2Z5I9ZlQFzXfLePSvQUNDWANrBHJ4y_tZ-llg",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						},
+						{
+							"name": "users - useradmin - ONLY ROLE_ADMIN",
+							"request": {
+								"url": {
+									"raw": "http://localhost:8080/api/hr/authorization/users?username=useradmin",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"hr",
+										"authorization",
+										"users"
+									],
+									"query": [
+										{
+											"key": "username",
+											"value": "useradmin",
+											"equals": true,
+											"description": ""
+										}
+									],
+									"variable": []
+								},
+								"method": "GET",
+								"header": [
+									{
+										"key": "Authorization",
+										"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJ1c2VyYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiZXhwIjoxNjIxNTUxMzU2LCJhdXRob3JpdGllcyI6WyJST0xFX0FETUlOIiwiUk9MRV9VU0VSIl0sImp0aSI6IjBiZTE0NWIwLTA2NTctNDVjZi05OTRmLWUwNjM3ZDljYTI0YiIsImVtYWlsIjoidXNlcmFkbWluQGt1cm9zaGFuLmNvbSIsImNsaWVudF9pZCI6ImNsaWVudF9ocl9hcHAifQ._RSDkz2Z5I9ZlQFzXfLePSvQUNDWANrBHJ4y_tZ-llg",
+										"description": ""
+									}
+								],
+								"body": {},
+								"description": ""
+							},
+							"response": []
+						}
+					],
+					"_postman_isSubFolder": true
+				}
+			]
+		}
+	]
+}

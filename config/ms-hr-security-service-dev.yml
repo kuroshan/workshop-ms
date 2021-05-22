@@ -5,12 +5,12 @@ spring:
         enabled: false
 
 server:
-  port: 9898
+  port: 8080
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:9001/eureka/
+      defaultZone: ${SPRING_DISCOVERY_SERVER_URI}
 
 security:
   oauth:

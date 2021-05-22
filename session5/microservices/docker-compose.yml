@@ -1,0 +1,65 @@
+version: '3.7'
+services:
+  ms-hr-users:
+    image: ms-hr-users:v1
+    container_name: ms-hr-users-v1
+    ports: 
+      - "8081:8080"
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_CLOUD_CONFIG_FAIL-FAST: 'true'
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: '30'
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1500
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.5
+      SPRING_CONFIG_SERVER_URI: http://ms-hr-config-server-v1:8080/
+      SPRING_DISCOVERY_SERVER_URI: http://ms-hr-discovery-server-v1:8080/eureka/
+      SPRING_DATASOURCE_URL: 'jdbc:mysql://database-mysql-dev:3306/securitydb?useSSL=true&serverTimezone=UTC'
+      SPRING_DATASOURCE_USERNAME: admin
+      SPRING_DATASOURCE_PASSWORD: mysql
+    networks: 
+      - workshopms
+  ms-hr-areas:
+    image: ms-hr-areas:v1
+    #container_name: ms-hr-areas-v1
+    #ports: 
+    #  - "8082:8080"
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_CLOUD_CONFIG_FAIL-FAST: 'true'
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: '30'
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1500
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.5
+      SPRING_CONFIG_SERVER_URI: http://ms-hr-config-server-v1:8080/
+      SPRING_DISCOVERY_SERVER_URI: http://ms-hr-discovery-server-v1:8080/eureka/
+      SPRING_DATASOURCE_URL: 'jdbc:oracle:thin:@//database-oracle-dev:1521/XE'
+      SPRING_DATASOURCE_USERNAME: hr
+      SPRING_DATASOURCE_PASSWORD: hrpw
+    networks: 
+      - workshopms
+  ms-hr-employees:
+    image: ms-hr-employees:v1
+    container_name: ms-hr-employees-v1
+    ports: 
+      - "8083:8080"
+    restart: always
+    environment:
+      SPRING_PROFILES_ACTIVE: dev
+      SPRING_CLOUD_CONFIG_FAIL-FAST: 'true'
+      SPRING_CLOUD_CONFIG_RETRY_MAX-ATTEMPTS: '30'
+      SPRING_CLOUD_CONFIG_RETRY_INITIAL-INTERVAL: 1500
+      SPRING_CLOUD_CONFIG_RETRY_MULTIPLIER: 1.5
+      SPRING_CONFIG_SERVER_URI: http://ms-hr-config-server-v1:8080/
+      SPRING_DISCOVERY_SERVER_URI: http://ms-hr-discovery-server-v1:8080/eureka/
+      SPRING_DATASOURCE_URL: 'jdbc:oracle:thin:@//database-oracle-dev:1521/XE'
+      SPRING_DATASOURCE_USERNAME: hr
+      SPRING_DATASOURCE_PASSWORD: hrpw
+    depends_on: 
+      - ms-hr-areas
+    networks: 
+      - workshopms
+networks: 
+  workshopms:
+    external: 
+      name: workshopms-net-dev
